@@ -67,7 +67,7 @@ public class CCuenta {
     }
 
     public void retirar(double cantidad){
-        if(cantidad < saldo){
+        if(cantidad > 0 && cantidad < saldo){
             System.out.println("Se han retirtado " + cantidad + "€ de los " + getSaldo() + "€ dispobibles en la cuenta");   
             setSaldo(saldo -cantidad);
             System.out.println("Quedando un total de " + getSaldo() + "€");
